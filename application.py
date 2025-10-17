@@ -19,7 +19,7 @@ def home():
 
 def send_email(favourite):
     subject = "New Favourite Thing of the Month  "
-    body = f"Your girlfriend’s favourite thing for this month is: {favourite}"
+    body = f"Ashraya's favourite thing for this month is : {favourite}"
     msg = MIMEText(body)
     msg["Subject"] = "Ashraya's new favourite of the month 💖 "
     msg["From"] = YOUR_EMAIL
