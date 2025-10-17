@@ -13,6 +13,8 @@
             align-items: center;
             font-family: 'Poppins', sans-serif;
             color: #fff;
+            overflow: hidden; /* keep floating images inside viewport */
+            position: relative;
         }
 
         .card {
@@ -23,6 +25,8 @@
             box-shadow: 0 4px 30px rgba(0,0,0,0.1);
             text-align: center;
             width: 320px;
+            z-index: 10; /* keep card above floating flowers */
+            position: relative;
         }
 
         h2 {
@@ -60,6 +64,44 @@
             margin-top: 15px;
             font-weight: bold;
         }
+
+        /* Floating flowers/hearts */
+        .floating {
+            position: absolute;
+            width: 40px;
+            opacity: 0.8;
+            animation: float linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 1; }
+            50% {
+                transform: translateY(50vh) translateX(50px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(-50px) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 480px) {
+            .card {
+                width: 90%;
+                padding: 30px 20px;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            input[type="text"], button {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -74,5 +116,16 @@
             <p class="success">Thanks, got it! Get ready for the surprise soon. 🌸</p>
         {% endif %}
     </div>
+
+    <!-- Floating flowers and hearts -->
+    <img src="https://i.ibb.co/N7fVx3p/flower1.png" class="floating" style="left: 10%; animation-duration: 12s; animation-delay: 0s;">
+    <img src="https://i.ibb.co/N7fVx3p/flower1.png" class="floating" style="left: 30%; animation-duration: 14s; animation-delay: 2s;">
+    <img src="https://i.ibb.co/N7fVx3p/flower1.png" class="floating" style="left: 50%; animation-duration: 16s; animation-delay: 4s;">
+    <img src="https://i.ibb.co/N7fVx3p/flower1.png" class="floating" style="left: 70%; animation-duration: 13s; animation-delay: 6s;">
+    <img src="https://i.ibb.co/N7fVx3p/flower1.png" class="floating" style="left: 90%; animation-duration: 15s; animation-delay: 8s;">
+
+    <img src="https://i.ibb.co/f9L0F8D/heart.png" class="floating" style="left: 20%; animation-duration: 12s; animation-delay: 1s;">
+    <img src="https://i.ibb.co/f9L0F8D/heart.png" class="floating" style="left: 60%; animation-duration: 14s; animation-delay: 3s;">
+
 </body>
 </html>
