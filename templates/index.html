@@ -117,15 +117,11 @@
         {% endif %}
     </div>
 
-    <!-- Floating flowers and hearts -->
-    <img src="https://i.ibb.co/N7fVx3p/flower1.png" class="floating" style="left: 10%; animation-duration: 12s; animation-delay: 0s;">
-    <img src="https://i.ibb.co/N7fVx3p/flower1.png" class="floating" style="left: 30%; animation-duration: 14s; animation-delay: 2s;">
-    <img src="https://i.ibb.co/N7fVx3p/flower1.png" class="floating" style="left: 50%; animation-duration: 16s; animation-delay: 4s;">
-    <img src="https://i.ibb.co/N7fVx3p/flower1.png" class="floating" style="left: 70%; animation-duration: 13s; animation-delay: 6s;">
-    <img src="https://i.ibb.co/N7fVx3p/flower1.png" class="floating" style="left: 90%; animation-duration: 15s; animation-delay: 8s;">
+    <!-- Floating hearts -->
+    <img src="{{ url_for('static', filename='images/test-1.png') }}" class="floating" style="--x:-15px; --rotate:25; left: 20%; animation-duration: 12s; animation-delay: 1s;">
 
-    <img src="https://i.ibb.co/f9L0F8D/heart.png" class="floating" style="left: 20%; animation-duration: 12s; animation-delay: 1s;">
-    <img src="https://i.ibb.co/f9L0F8D/heart.png" class="floating" style="left: 60%; animation-duration: 14s; animation-delay: 3s;">
+    <!-- Floating petals -->
+    <img src="{{ url_for('static', filename='images/test-1.png') }}" class="floating" style="--x:5px; --rotate:10; left: 25%; animation-duration: 10s; animation-delay: 0.5s;">
 
 </body>
 </html>
