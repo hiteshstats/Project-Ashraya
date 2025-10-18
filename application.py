@@ -19,11 +19,11 @@ def home():
 
 def send_email(favourite):
     subject = "New Favourite Thing of the Month  "
-    body = f"Thankyou for the update chotu. Your new favourite thing for this month is : {favourite}"
+    body = f"Thankyou for the update chotu. Your new favourite thing for this month is : {favourite}. Expect it soon!"
     msg = MIMEText(body)
     msg["Subject"] = "Ashraya's new favourite of the month 💖 "
     msg["From"] = YOUR_EMAIL
-    msg["To"] = ", ".join([YOUR_EMAIL, "hiteshstatistics@gmail.com"])
+    msg["To"] = ", ".join([YOUR_EMAIL, "shettyashraya6@gmail.com"])
 
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
         server.login(YOUR_EMAIL, YOUR_PASSWORD)
